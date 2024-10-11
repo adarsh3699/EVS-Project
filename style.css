@@ -244,13 +244,16 @@ section .title::after {
 }
 
 .issues .issues_content {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px;
   justify-content: space-evenly;
+  width: 90%;
+  margin: auto;
   margin-top: 50px;
 }
 
 .issues_box {
-  width: 28%;
   border-radius: 20px;
   background-size: cover;
   padding: 20px;
@@ -342,19 +345,37 @@ section .title::after {
 
 .educationDeatils p {
   margin-top: 10px;
-  font-size: 20px;
 }
 
-/*............................... solutions section styling .............................. */
+/* iotSensors section styling */
+.iotSensors {
+  color: #fff;
+  background: #111;
+}
 
-.section_2_but {
+.iotSensorsTitle {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: "General Sans", sans-serif;
+}
+
+.iotSensors_but {
   font-weight: bold;
   color: #fada50;
 }
 
-.creativity .serv-content .card {
+.iotSensors .serv-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.iotSensors .serv-content .card {
   width: calc(33% - 20px);
-  background: rgb(69, 67, 66);
+  background: #222;
   text-align: center;
   border-radius: 6px;
   box-sizing: border-box;
@@ -363,199 +384,167 @@ section .title::after {
   transition: all 0.3s ease;
   margin: 10px;
 }
-
-.creativity .serv-content .card:hover {
+.iotSensors .serv-content .card:hover {
   background: #b2ac88;
 }
-
-.creativity .serv-content .card .box {
+.iotSensors .serv-content .card .box {
   transition: all 0.3s ease;
   /* font-weight: 500; */
 }
-
-.creativity .serv-content .card:hover .box {
+.iotSensors .serv-content .card:hover .box {
   transform: scale(1.05);
   /* color: black; */
 }
 
-.creativity .serv-content .card i {
-  font-size: 50px;
-  color: #b2ac88;
-  /* line-height: 70px; */
-  transition: color 0.3s ease;
-}
-
-.creativity .serv-content .card:hover i {
-  color: #fff;
-}
-
-/* Countdown section styling */
-
-.Countdown {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 100px 0;
-  background: gray;
-  color: #fff;
-  font-family: "General Sans", sans-serif;
-}
-
-.creativity_section_title {
-  text-align: center;
-  font-size: 40px;
-  font-weight: 500;
-  margin-bottom: 60px;
-  padding-bottom: 20px;
-}
-
-.creativity_section_title span {
-  color: #fada50;
-  font-weight: bold;
-}
-
-.countdown_timer {
-  text-align: center;
-  font-size: 100px;
-  font-weight: bold;
-}
-
-.countdown_register_btn {
-  background: #fada50;
-  text-align: center;
-  color: #fff;
+.iotSensors .iotSensorsBoxTitle {
   font-size: 20px;
-  font-weight: 500;
-  padding: 15px 100px;
-  box-sizing: border-box;
-  border-radius: 6px;
-  color: black;
-  transition: all 0.3s ease;
-  width: fit-content;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fada50;
+}
+
+/*............................... otherSolutions .............................. */
+.otherSolutions {
+  background-image: linear-gradient(to right, #478ac9, #db545a);
+  padding: 60px 50px;
+  color: white;
+}
+
+.otherSolutionsTitle {
   margin: auto;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.1;
+  width: 782px;
+  text-align: center;
+  font-family: "General Sans", sans-serif;
+  margin-bottom: 100px;
+}
+
+.otherSolutionsTable {
+  display: flex;
   margin-top: 50px;
 }
 
-.countdown_register_btn:hover {
-  background: #d5ae00;
-}
-
-.countdown_register_btn span {
-  text-decoration: line-through;
-}
-
-/* cta_section section styling */
-.cta_section {
-  background-color: gray;
-}
-
-.cta_section_table {
+.otherSolutionsTableRows {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  background: #b2ac88;
-  color: #fff;
-  border-radius: 7px;
-  border: #383838 1px solid;
-  color: black;
+  width: 33%;
+  padding: 0 20px;
 }
 
-.cta_section_table_left {
-  width: 70%;
-  border-right: #383838 1px solid;
-  padding: 40px 0 40px 40px;
-  box-sizing: border-box;
-}
-
-.cta_section_table_left_title {
-  font-size: 34px;
-  font-weight: bold;
-  margin-bottom: 50px;
-}
-
-.cta_section_table_left_text li {
+.otherSolutionsTableTitle {
+  display: flex;
+  align-items: center;
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 20px;
-}
-
-.cta_section_table_right {
-  width: 30%;
-  padding: 40px 10px 40px 40px;
-}
-
-.cta_section_table_right_title {
-  font-size: 25px;
-  font-weight: 500;
-  margin-bottom: 20px;
-}
-
-.cta_section_table_right_price {
-  display: flex;
-  align-items: center;
-}
-
-.cta_section_table_right_main_price {
-  font-size: 50px;
   font-weight: bold;
-  color: #b3ff00;
+  width: 100%;
+}
+
+.otherSolutionsTableTitle span {
+  font-size: 50px !important;
   margin-right: 10px;
 }
 
-.cta_section_table_right_cross_price {
-  text-decoration: line-through;
+.otherSolutionsDetails {
+  font-style: italic;
+  line-height: 30px;
+  font-weight: 550;
+}
+/*............................... teamMates .............................. */
+.teamMates {
+  background: rgb(69, 67, 66);
+  color: #fff;
 }
 
-.cta_section_table_right_btn {
-  background: #fada50;
+.teamMatesTitle {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 40px;
+  color: rgb(211, 183, 186);
+  font-family: "General Sans", sans-serif;
   text-align: center;
-  font-size: 20px;
-  font-weight: 500;
-  padding: 15px 0;
-  box-sizing: border-box;
-  border-radius: 6px;
-  color: black;
-  transition: all 0.3s ease;
-  width: 80%;
-  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
-.cta_section_table_right_btn:hover {
-  background: #d5ae00;
+.teamMatesFlex {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(calc(25% - 10px), 1fr));
+  margin-top: 50px;
+  width: 90%;
+  margin: auto;
 }
 
-.dilogForm {
+.teamMatesBox {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  /* align-items: center; */
 }
 
-/* responsive media query start */
-@media (max-width: 1104px) {
-  .about .about-content .left img {
-    height: 350px;
-    width: 350px;
+.teamMatesBox img {
+  width: 80%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  aspect-ratio: 1/1.1;
+  object-fit: cover;
+}
+
+.teamMatesBox p {
+  margin-top: 20px;
+  padding-right: 10px;
+}
+
+#footer {
+  font-family: General Sans, sans-serif;
+  background-color: rgb(29, 27, 27);
+  color: white;
+  width: 100%;
+  min-height: 150px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footerLogo {
+  width: 100px;
+}
+
+/*............................... mWeb styling .............................. */
+@media screen and (max-width: 1200px) {
+  .otherSolutionsTitle {
+    width: 100%;
+    font-size: 30px;
+    margin-bottom: unset;
+  }
+  .otherSolutionsTable {
+    flex-wrap: wrap;
+  }
+  .otherSolutionsTableRows {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .otherSolutionsTableTitle {
+    margin-bottom: unset;
   }
 }
-
 @media (max-width: 991px) {
   .max-width {
     padding: 0 50px;
   }
 
-  .cta_section_table {
+  .education {
     flex-direction: column;
+    align-items: center;
   }
 
-  .cta_section_table_left {
-    width: 100%;
-    border-right: none;
-  }
-
-  .cta_section_table_right {
-    width: 100%;
+  .education img {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
   }
 }
 
@@ -609,23 +598,13 @@ section .title::after {
     max-width: 930px;
   }
 
-  .about .about-content .column {
-    width: 100%;
-  }
-
-  .about .about-content .left {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto 60px;
-  }
-
-  .about .about-content .right {
-    flex: 100%;
-  }
-
-  .creativity .serv-content .card {
+  .iotSensors .serv-content .card {
     width: 80%;
     margin-bottom: 20px;
+  }
+
+  .teamMatesFlex {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }
 
@@ -648,16 +627,8 @@ section .title::after {
     font-size: 15px;
   }
 
-  .home .home-content a {
-    font-size: 20px;
-  }
-
-  .services .serv-content .card {
-    width: 100%;
-  }
-
-  .countdown_timer {
-    font-size: 70px;
+  .educationTitle {
+    font-size: 30px;
   }
 }
 
@@ -665,52 +636,13 @@ section .title::after {
   .home .home-content .text-1 {
     font-size: 30px;
   }
-
-  .about .about-content .right .text {
-    font-size: 19px;
-  }
-
-  .about .about-content .left img {
-    width: 100%;
-  }
-
-  .creativity_section_title {
+  .iotSensorsTitle {
     font-size: 30px;
     padding: 0;
   }
 
-  .countdown_register_btn {
-    width: 80%;
-    padding: 15px 0;
+  .teamMatesBox {
+    align-items: center;
+    margin-bottom: 20px;
   }
-
-  .contact .right form .fields {
-    flex-direction: column;
-  }
-
-  .contact .right form .name,
-  .contact .right form .email {
-    margin: 0;
-  }
-
-  .right form .error-box {
-    width: 150px;
-  }
-
-  .scroll-up-btn {
-    right: 15px;
-    bottom: 15px;
-    height: 38px;
-    width: 35px;
-    font-size: 23px;
-    line-height: 38px;
-  }
-}
-
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 50px;
-  background-color: #fff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
