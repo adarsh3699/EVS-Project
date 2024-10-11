@@ -6,19 +6,24 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 /* custom scroll bar */
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #888;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
@@ -27,16 +32,19 @@ html {
 section {
   padding: 100px 0;
 }
+
 .max-width {
   max-width: 1300px;
   padding: 0 80px;
   margin: auto;
 }
+
 .about,
 .creativity,
 .contact {
   font-family: "General Sans", sans-serif;
 }
+
 .about .about-content,
 .creativity .serv-content,
 .contact .contact-content {
@@ -44,6 +52,7 @@ section {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 section .title {
   position: relative;
   text-align: center;
@@ -53,6 +62,7 @@ section .title {
   padding-bottom: 20px;
   font-family: "General Sans", sans-serif;
 }
+
 section .title::before {
   content: "";
   position: absolute;
@@ -63,6 +73,7 @@ section .title::before {
   background: #111;
   transform: translateX(-50%);
 }
+
 section .title::after {
   position: absolute;
   bottom: -8px;
@@ -95,16 +106,19 @@ section .title::after {
   padding: 15px 0;
   background: rgb(231, 135, 60);
 }
+
 .navbar .max-width {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .navbar .logo a {
   color: white;
   font-size: 35px;
   font-weight: 600;
 }
+
 .navbar .logo a span {
   color: rgb(231, 135, 60);
   transition: all 0.3s ease-in-out;
@@ -118,6 +132,7 @@ section .title::after {
   list-style: none;
   display: inline-block;
 }
+
 .navbar .menu li a {
   display: block;
   font-size: 18px;
@@ -125,6 +140,7 @@ section .title::after {
   margin-left: 25px;
   transition: color 0.3s ease-in-out;
 }
+
 .navbar .menu li a:hover {
   color: rgb(231, 135, 60);
 }
@@ -140,6 +156,7 @@ section .title::after {
   cursor: pointer;
   display: none;
 }
+
 .scroll-up-btn {
   position: fixed;
   height: 45px;
@@ -159,11 +176,13 @@ section .title::after {
   pointer-events: none;
   transition: all 0.3s ease;
 }
+
 .scroll-up-btn.show {
   bottom: 30px;
   opacity: 1;
   pointer-events: auto;
 }
+
 .scroll-up-btn:hover {
   filter: brightness(90%);
 }
@@ -192,22 +211,26 @@ section .title::after {
   background: inherit;
   filter: brightness(0.5);
 }
+
 .home .max-width {
   width: 100%;
   display: flex;
   z-index: 1;
 }
+
 .home .home-content .text-1 {
   font-size: 70px;
   font-weight: 600;
   margin-left: -3px;
   text-shadow: 2px 2px 4px #000;
 }
+
 .home .home-content .text-2 {
   font-size: 20px;
   margin: 5px 0;
   text-shadow: 2px 2px 4px #000;
 }
+
 .home .home-content .text-2 span,
 .home .home-content .text-1 span {
   color: rgb(231, 135, 60);
@@ -265,58 +288,64 @@ section .title::after {
   font-weight: 500;
 }
 
-/* ............................................................. */
-.issues .about-content .left img {
-  height: 400px;
-  width: 400px;
-  object-fit: cover;
-  border-radius: 6px;
+/*............................... solutions section styling .............................. */
+.solutions {
+  color: #fff;
+  background: rgb(69, 67, 66);
 }
 
-.issues .about-content .right {
-  width: 55%;
-}
-.about .about-content .right .text {
-  font-size: 25px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-.about .about-content .right .text span {
-  color: crimson;
-}
-.about .about-content .right p {
-  text-align: justify;
-}
-.about .about-content .right a {
-  display: inline-block;
-  background: crimson;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 500;
-  padding: 10px 30px;
-  margin-top: 20px;
-  border-radius: 6px;
-  border: 2px solid crimson;
-  transition: all 0.3s ease;
-}
-.about .about-content .right a:hover {
-  color: crimson;
-  background: none;
-}
-/* creativity section styling */
-.creativity {
-  color: #fff;
-  background: #111;
+.solutions .title::after {
+  content: "WE Have";
+  background: rgb(69, 67, 66);
 }
 
-.section_2_title {
-  text-align: center;
+/*............................... education .............................. */
+
+.education {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  width: 90%;
+  margin: auto;
+}
+
+.education img {
+  width: 50%;
+  border-radius: 20px;
+  margin-right: 40px;
+}
+
+.educationTitle {
   font-size: 40px;
-  font-weight: 500;
-  margin-bottom: 60px;
-  padding-bottom: 20px;
+  font-weight: 600;
+  line-height: 40px;
+  color: rgb(211, 183, 186);
   font-family: "General Sans", sans-serif;
 }
+
+.educationDeatils {
+  display: flex;
+
+  margin-top: 50px;
+}
+
+.educationDeatils span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(55, 52, 51);
+  height: 40px;
+  min-width: 40px;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+
+.educationDeatils p {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+/*............................... solutions section styling .............................. */
 
 .section_2_but {
   font-weight: bold;
@@ -325,7 +354,7 @@ section .title::after {
 
 .creativity .serv-content .card {
   width: calc(33% - 20px);
-  background: #222;
+  background: rgb(69, 67, 66);
   text-align: center;
   border-radius: 6px;
   box-sizing: border-box;
@@ -334,26 +363,32 @@ section .title::after {
   transition: all 0.3s ease;
   margin: 10px;
 }
+
 .creativity .serv-content .card:hover {
   background: #b2ac88;
 }
+
 .creativity .serv-content .card .box {
   transition: all 0.3s ease;
   /* font-weight: 500; */
 }
+
 .creativity .serv-content .card:hover .box {
   transform: scale(1.05);
   /* color: black; */
 }
+
 .creativity .serv-content .card i {
   font-size: 50px;
   color: #b2ac88;
   /* line-height: 70px; */
   transition: color 0.3s ease;
 }
+
 .creativity .serv-content .card:hover i {
   color: #fff;
 }
+
 /* Countdown section styling */
 
 .Countdown {
@@ -414,6 +449,7 @@ section .title::after {
 .cta_section {
   background-color: gray;
 }
+
 .cta_section_table {
   display: flex;
   justify-content: center;
@@ -424,6 +460,7 @@ section .title::after {
   border: #383838 1px solid;
   color: black;
 }
+
 .cta_section_table_left {
   width: 70%;
   border-right: #383838 1px solid;
@@ -494,6 +531,7 @@ section .title::after {
   align-items: center;
   flex-direction: column;
 }
+
 /* responsive media query start */
 @media (max-width: 1104px) {
   .about .about-content .left img {
@@ -501,6 +539,7 @@ section .title::after {
     width: 350px;
   }
 }
+
 @media (max-width: 991px) {
   .max-width {
     padding: 0 50px;
@@ -514,18 +553,22 @@ section .title::after {
     width: 100%;
     border-right: none;
   }
+
   .cta_section_table_right {
     width: 100%;
   }
 }
+
 @media (max-width: 947px) {
   .menu-btn {
     display: block;
     z-index: 999;
   }
+
   .menu-btn i.active:before {
     content: "\f00d";
   }
+
   .navbar .menu {
     position: fixed;
     height: 100vh;
@@ -537,18 +580,22 @@ section .title::after {
     padding-top: 80px;
     transition: all 0.3s ease;
   }
+
   .navbar .menu.active {
     left: 0;
   }
+
   .navbar .menu li {
     display: block;
   }
+
   .navbar .menu li a {
     display: inline-block;
     margin: 20px 0;
     font-size: 25px;
     color: white;
   }
+
   .home .home-content .text-1 {
     font-size: 50px;
   }
@@ -557,17 +604,21 @@ section .title::after {
     font-size: 23px;
     padding: 10px 30px;
   }
+
   .max-width {
     max-width: 930px;
   }
+
   .about .about-content .column {
     width: 100%;
   }
+
   .about .about-content .left {
     display: flex;
     justify-content: center;
     margin: 0 auto 60px;
   }
+
   .about .about-content .right {
     flex: 100%;
   }
@@ -577,18 +628,22 @@ section .title::after {
     margin-bottom: 20px;
   }
 }
+
 @media (max-width: 690px) {
   .max-width {
     padding: 0;
     width: 90%;
     box-sizing: border-box;
   }
+
   .home-content {
     padding: 0 20px;
   }
+
   .home .home-content .text-1 {
     font-size: 40px;
   }
+
   .home .home-content .text-2 {
     font-size: 15px;
   }
@@ -596,6 +651,7 @@ section .title::after {
   .home .home-content a {
     font-size: 20px;
   }
+
   .services .serv-content .card {
     width: 100%;
   }
@@ -604,34 +660,43 @@ section .title::after {
     font-size: 70px;
   }
 }
+
 @media (max-width: 500px) {
   .home .home-content .text-1 {
     font-size: 30px;
   }
+
   .about .about-content .right .text {
     font-size: 19px;
   }
+
   .about .about-content .left img {
     width: 100%;
   }
+
   .creativity_section_title {
     font-size: 30px;
     padding: 0;
   }
+
   .countdown_register_btn {
     width: 80%;
     padding: 15px 0;
   }
+
   .contact .right form .fields {
     flex-direction: column;
   }
+
   .contact .right form .name,
   .contact .right form .email {
     margin: 0;
   }
+
   .right form .error-box {
     width: 150px;
   }
+
   .scroll-up-btn {
     right: 15px;
     bottom: 15px;
@@ -641,6 +706,7 @@ section .title::after {
     line-height: 38px;
   }
 }
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
