@@ -645,4 +645,12 @@ section .title::after {
     align-items: center;
     margin-bottom: 20px;
   }
+
+  .otherSolutions {
+    padding: 50px 20px;
+  }
+
+  .otherSolutionsTableTitle span {
+    font-size: 35px !important;
+  }
 }
