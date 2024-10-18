@@ -248,7 +248,7 @@ section .title::after {
 
 /* .............about section styling............... */
 .issues .title::after {
-  content: "Faceing";
+  content: "Facing";
 }
 
 .issues .issues_content {
